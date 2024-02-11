@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "7f7c72d8-0f5e-43fe-931b-628e38049616",
+		"name": "Sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30644159"
+	},
+	"item": [
+		{
+			"name": "To validate number of alerts for date range for 1 Day -  lists of alert for Fraud source, Channel is Wire and Priority - Medium",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "10.10.10.10"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZFRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDdGFtcCI6IjIwMjQtMDItMDhUMDk6MTY6NDguMjU2WiJ9.X9fD_fL9Ww7P7wzefNhklXsALhqcYV44S7sLqIeL0vs"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "cookie",
+						"value": "placeboMeister=84nrybYqRACNBxzV/Sgorq2IooH+iDiXpubUc5DbLJo; IG_SESSIONID=7a48ed63c4710af8b60598113dde0753; GASecureSSOId=9_0n9pAGYYIwXmR6P7_RpkvPE8E.*AAJTSQACMDIAAlNLABxLdFZQYm5SKzZ3UFNHMEM1Q0lUeUJEV1NUTkU9AAR0eXBlAANDVFMAAlMxAAIwMw..*; GASecureSSOIdPublic=6tFWTuBtsTRzurqg8o94GzqxcyxOLqlLcdr6b1HpX4U; token=Bearer%20eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZFRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SnpkV0lpT2lJM05ESmhZak5oTVMwek1HRmtMVFEwTW1NdFlUVm1PQzB4TWpRMVl6bGtNVGt4TWpnaUxDSmhkV1FpT2lKaGRYUnZRRzFoYm1GblpYSXVZMjl0SWl3aVlYVjBhRzl5YVhwaGRHbHZia2xrSWpvaU9UazFPV0l4TjJNdFpqRmxPUzAwTnpBNUxUZ3haV1l0WmpOa1pXVTFZV1JtTmpKaElpd2lhWE56SWpvaWRYTmxjaTF6WlhKMmFXTmxJbjAucFdScWRBNGwwNWZod0o2cERBTWduZ1FsWlhkVTktSjNGbnlKanJtU3ktYyIsInRpbWVzdGFtcCI6IjIwMjQtMDItMDhUMDk6MTY6NDguMjU2WiJ9.X9fD_fL9Ww7P7wzefNhklXsALhqcYV44S7sLqIeL0vs"
+					},
+					{
+						"key": "origin",
+						"value": "https://10.10.10.10"
+					},
+					{
+						"key": "referer",
+						"value": "https://10.10.10.10/cases"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not A(Brand\";v=\"99\", \"Google Chrome\";v=\"121\", \"Chromium\";v=\"121\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "limit",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "totalCount",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "filters[]",
+							"value": "{\"source\":[\"Fraud\"],\"_mode\":\"IN\"}",
+							"type": "text"
+						},
+						{
+							"key": "filters[]",
+							"value": "{\"createdOn\":\"2024-01-16T00:00:00.000+05:30\",\"_mode\":\"GTE\"}",
+							"type": "text"
+						},
+						{
+							"key": "filters[]",
+							"value": "{\"createdOn\":\"2024-01-16T23:59:59.999+05:30\",\"_mode\":\"LTE\"}",
+							"type": "text"
+						},
+						{
+							"key": "filters[]",
+							"value": "{\"channel\":\"WIRE\"}",
+							"type": "text"
+						},
+						{
+							"key": "filters[]",
+							"value": "{\"priority\":[\"MEDIUM\"],\"_mode\":\"IN\"}",
+							"type": "text"
+						},
+						{
+							"key": "sort[]",
+							"value": "{\"createdOn\":\"DESC\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://10.10.10.10/api/v1/case/get_list"
+			},
+			"response": []
+		},
+		{
+			"name": "To validate number of alerts for date range for 1 Day -  lists of alert for AML source, Channel is TRANSACTION_MONITORING",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "10.10.10.10"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbJ9.eyJpZFRva2VuIjoiZJ-5vxZ7CBMYHJI-nOdVAhBcLEL-WzMz6l2k"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "cookie",
+						"value": "placeboMeister=84nrybYqRACNBxzV/Sgorq2IooH+iDiXpubUc5DbLJo; IG_SESSIONID=3b4062d4fe2c5d88cbbd18eda0f58e52; GASecureSSOId=G3Oub7orhhiuUGuG2OQ8l-KtpW8.*AAJTSQACMDIAAlNLABw4ZHVkR2xEUUNILzg5dmV6YjBGbmY3cUVaR2s9AAR0eXBlAANDVFMAAlMxAAIwNA..*; GASecureSSOIdPublic=Im2KXRqJzNJljQVmCFTyzJIe13tSPI9daFwKnNDmzR0; token=Bearer%20eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZFRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SnpkV0lpT2lJM05ESmhZak5oTVMwek1HRmtMVFEwTW1NdFlUVm1PQzB4TWpRMVl6bGtNVGt4TWpnaUxDSmhkV1FpT2lKaGRYUnZRRzFoYm1GblpYSXVZMjl0SWl3aVlYVjBhRzl5YVhwaGRHbHZia2xrSWpvaU1HUmxZVEptWTJZdE5XVXlNeTAwTUdKa0xUaGhOMlV0T1RNM1pHRXpZV05oWlRjd0lpd2lhWE56SWpvaWRYTmxjaTF6WlhKMmFXTmxJbjAubUlxY0Z5Q2VSdHRTVGQ2U0V0SVdMb1YxcEhoc0IyMkIwX2gtQjhjS3d3RSIsInRpbWVzdGFtcCI6IjIwMjQtMDItMDhUMTA6Mjc6MDAuMzIxWiJ9.mxhkE3I7J-5vxZ7CBMYHJI-nOdVAhBcLEL-WzMz6l2k"
+					},
+					{
+						"key": "origin",
+						"value": "https://10.10.10.10"
+					},
+					{
+						"key": "referer",
+						"value": "https://10.10.10.10/cases"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not A(Brand\";v=\"99\", \"Google Chrome\";v=\"121\", \"Chromium\";v=\"121\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "limit",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "totalCount",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "filters[]",
+							"value": "{\"createdOn\":\"2024-02-08T00:00:00.000+05:30\",\"_mode\":\"GTE\"}",
+							"type": "text"
+						},
+						{
+							"key": "filters[]",
+							"value": "{\"createdOn\":\"2024-02-08T23:59:59.999+05:30\",\"_mode\":\"LTE\"}",
+							"type": "text"
+						},
+						{
+							"key": "filters[]",
+							"value": "{\"source\":[\"AML\"],\"_mode\":\"IN\"}",
+							"type": "text"
+						},
+						{
+							"key": "filters[]",
+							"value": "{\"channel\":\"TRANSACTION_MONITORING\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://10.10.10.10/api/v1/case/get_list"
+			},
+			"response": []
+		}
+	]
+}
